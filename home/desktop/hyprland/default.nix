@@ -1,0 +1,5 @@
+{
+  imports = [
+    ./illogical-flake.nix
+  ];
+}
