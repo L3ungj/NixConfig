@@ -35,6 +35,10 @@
       openFirewall = true;
     };
     tailscale.enable = true;
+    logind.settings.Login = {
+      HandlePowerKey = "ignore";
+      HandleLidSwitchExternalPower = "ignore";
+    };
   };
 
   environment.systemPackages = with pkgs; [
