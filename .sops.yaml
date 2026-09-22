@@ -2,6 +2,7 @@ keys:
   - &admin_justin age175twe3tt438v4fvwuwtan77qjp22dmlz62xxqcuaau9lm59qfghszcu0zu
   - &host_sapin age1asxe7xdj2967urvu6szwyv649rnsq2cye50hwlym5u3968eryeyq0sdp4y
   - &host_aether age1s4mxulyk27sa6fl82cgnp4hr9ju2672zy68jucetuwgm82p4wetqt4zc3s
+  - &host_olympus age164j54sgvqnnphapy3g6g5mwj6pu0ljvt7gcq5p5newhzun3d89xq32psp0
 
 creation_rules:
   - path_regex: sops/secrets\.yaml$
@@ -10,3 +11,4 @@ creation_rules:
         - *admin_justin
         - *host_sapin
         - *host_aether
+        - *host_olympus

@@ -12,6 +12,7 @@
     inputs.lanzaboote.nixosModules.lanzaboote
     "${self}/sops/nixos.nix"
     "${self}/nixos/weylus.nix"
+    "${self}/nixos/wifi.nix"
   ];
 
   boot.loader = {

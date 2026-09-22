@@ -350,11 +350,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789990775,
-        "narHash": "sha256-sBYgDoa6MU2BHe6vdZFECd+jhaJw4OIMoWHNcOvtTVQ=",
+        "lastModified": 1790075864,
+        "narHash": "sha256-FG22bF9xv+5PYxLXvvPDyeSNyE+Dkz1TthCVBYpH+uU=",
         "owner": "L3ungj",
         "repo": "mnemoflake",
-        "rev": "80fd882d7e8acb09dbbb876db60ca9b78c54e7c0",
+        "rev": "233d2d336bf3c20c9fc8828bc261b0162a7f4411",
         "type": "github"
       },
       "original": {

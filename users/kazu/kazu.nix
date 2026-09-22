@@ -101,10 +101,11 @@
     };
   };
 
-  home.activation.hypridle-suspend-disable = if host.name == "aether" then
+  home.activation.hypridle-suspend-disable = lib.mkIf (host.name == "aether") (
     config.lib.dag.entryAfter ["copyIllogicalImpulseConfigs"] ''
       ${lib.getExe pkgs.patch} -u $HOME/.config/hypr/hypridle.conf < ${self}/hosts/aether/hypridle-suspend-disable.patch
-    '' else null;
+    ''
+  );
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage

@@ -22,20 +22,13 @@
   boot.loader = {
     systemd-boot = {
       enable = true;
-      configurationLimit = 5;
-      extraEntries = {
-        "windows.conf" = ''
-          title Windows 11
-          efi /EFI/Microsoft/Boot/bootmgfw.efi.bak
-          sort-key zzz
-        '';
-      };
+      configurationLimit = 3;
     };
     efi.canTouchEfiVariables = false;
     timeout = 0;
   };
 
-  networking.hostName = "sapin";
+  networking.hostName = "olympus";
 
   nix.settings.trusted-users = host.users;
 

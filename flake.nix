@@ -83,6 +83,15 @@
         ];
       }
       {
+        name = "olympus";
+        users = ["kazu"];
+        system = "x86_64-linux";
+        type = "pc";
+        keys = [
+          "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBWGN0gtWUNEDyUoeEXbjHSE8dLEFsbMJudf/jYEcVx7 kazu@nixos"
+ 	];
+      }
+      {
         name = "radon";
         users = ["tiny"];
         system = "aarch64-linux";
