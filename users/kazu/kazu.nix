@@ -81,9 +81,14 @@
     usbutils # lsusb
     sbctl
 
+    # android
+    android-tools
+    scrcpy
+
     # social
     whatsapp-electron
     discord
+    signal-desktop
 
     # apps
     musescore
@@ -102,7 +107,7 @@
     };
   };
 
-  home.activation.hypridle-suspend-disable = lib.mkIf (host.name == "aether") (
+  home.activation.hypridle-suspend-disable = lib.mkIf (host.name == "aether" || host.name == "olympus") (
     config.lib.dag.entryAfter ["copyIllogicalImpulseConfigs"] ''
       ${lib.getExe pkgs.patch} -u $HOME/.config/hypr/hypridle.conf < ${self}/hosts/aether/hypridle-suspend-disable.patch
     ''

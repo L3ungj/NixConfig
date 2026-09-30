@@ -79,6 +79,11 @@
   # Required by vscodium remote SSH
   programs.nix-ld.enable = true;
 
+  virtualisation.waydroid = {
+    enable = true;
+    package = pkgs.waydroid-nftables;
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
