@@ -30,26 +30,23 @@
 
   networking.hostName = "olympus";
 
-  nix.settings.trusted-users = host.users;
-
+  # Do not suspend system on lid close
   services.logind.settings.Login = {
     HandleLidSwitch = "ignore";
     HandleLidSwitchExternalPower = "ignore";
     HandleLidSwitchDocked = "ignore";
   };
 
+  # NVIDIA GPU config
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
-
   services.xserver.videoDrivers = [ "nvidia" ];
-
   hardware.nvidia = {
     modesetting.enable = true;
     open = false;
     nvidiaSettings = true;
-   
     branch = "legacy_580";
   };
 

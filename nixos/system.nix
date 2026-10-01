@@ -1,9 +1,4 @@
-{
-  self, 
-  pkgs,
-  lib,
-  ...
-}: {
+{self, pkgs, lib, host, ...}: {
   nix = {
     settings.experimental-features = ["nix-command" "flakes"];
   };
@@ -48,4 +43,6 @@
     curl
     tailscale
   ];
+  
+  nix.settings.trusted-users = host.users;
 }

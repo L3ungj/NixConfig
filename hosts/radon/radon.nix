@@ -43,9 +43,6 @@
 
   nixpkgs.config.allowUnsupportedSystem = true;
 
-  # Needed for `nixos-rebuild switch --target-host` to accept unsigned closures
-  nix.settings.trusted-users = [ "kazu" "tiny" ];
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

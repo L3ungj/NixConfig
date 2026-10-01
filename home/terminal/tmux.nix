@@ -29,6 +29,10 @@
           set -ag status-right "#{E:@catppuccin_status_session}"
           set -ag status-right "#{E:@catppuccin_status_uptime}"
           set -agF status-right "#{E:@catppuccin_status_battery}"
+
+          set -g @catppuccin_window_default_text "#W"
+          set -g @catppuccin_window_current_text "#W"
+          set -g @catppuccin_window_text "#W"
         '';
       }
       cpu

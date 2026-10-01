@@ -59,26 +59,25 @@
     };
   };
 
+  # AMD GPU config
   boot.kernelModules = [
     "amdgpu"
     "mt7925e"
   ];
-
   services.xserver.videoDrivers = ["amdgpu"];
   hardware.graphics.enable = true;   
   hardware.enableRedistributableFirmware = true;
-
   boot.kernelParams = [
     "pcie_aspm=off"
   ];
 
+  # Allow cross-compiling for aarch64
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
-
-  nix.settings.trusted-users = host.users;
 
   # Required by vscodium remote SSH
   programs.nix-ld.enable = true;
 
+  # Enable Waydroid for running Android apps
   virtualisation.waydroid = {
     enable = true;
     package = pkgs.waydroid-nftables;
