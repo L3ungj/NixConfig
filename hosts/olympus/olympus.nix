@@ -8,6 +8,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ./llama.nix
     "${self}/nixos/system.nix"
     "${self}/nixos/hyprland.nix"
     "${self}/nixos/plasma.nix"
