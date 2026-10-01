@@ -14,7 +14,6 @@
     plugins = with pkgs.tmuxPlugins; [
       sensible
       resurrect
-      continuum
       {
         plugin = catppuccin;
         extraConfig = ''
@@ -34,6 +33,12 @@
       }
       cpu
       battery
+      {
+        plugin = continuum;
+        extraConfig = ''
+          set -g @continuum-restore 'on'
+        '';
+      }
     ];
   };
 }
