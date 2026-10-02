@@ -101,6 +101,13 @@
     ];
     keys = nixpkgs.lib.concatMap (host: host.keys) hosts;
     getUserModules = map (user: ./users/${user}/nixos.nix);
+    overlays = [
+      (final: prev: {
+        ltrace = prev.ltrace.overrideAttrs (_old: {
+          doCheck = false;
+        });
+      })
+    ];
   in {
     nixosConfigurations = builtins.listToAttrs (map (host: let
       specialArgsWithHost = specialArgs // {inherit host;};
@@ -110,6 +117,9 @@
         system = host.system;
         specialArgs = specialArgsWithHost;
         modules = [
+          {
+            nixpkgs.overlays = overlays;
+          }
           sops-nix.nixosModules.sops
           ./hosts/${host.name}/${host.name}.nix
           home-manager.nixosModules.home-manager {
@@ -136,6 +146,9 @@
         pkgs = nixpkgs;
         extraSpecialArgs = specialArgs;
         modules = [
+          {
+            nixpkgs.overlays = overlays;
+          }
           sops-nix.homeManagerModules.sops
           ./users/${user}/${user}.nix
         ];
