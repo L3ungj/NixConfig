@@ -50,6 +50,7 @@
     nvidiaSettings = true;
     branch = "legacy_580";
   };
+  nixpkgs.config.cudaCapabilities = ["6.1"];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
