@@ -20,7 +20,7 @@
     (let
       customised = inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
         background = "${self}/assets/wallpapers/forest.jpg";
-        avatar = "${self}/assets/avatar/me.png";
+        avatar = "${self}/assets/images/me.png";
         autoColor = true;
       };
     in pkgs.runCommand "pixie-sddm-24h" {} ''

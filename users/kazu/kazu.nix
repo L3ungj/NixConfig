@@ -20,8 +20,6 @@
   home.homeDirectory = "/home/kazu";
 
   home.packages = with pkgs; [
-    fastfetch
-
     # archives
     zip
     xz
@@ -80,6 +78,9 @@
     pciutils # lspci
     usbutils # lsusb
     sbctl
+
+    # webdev
+    bun
 
     # android
     android-tools
