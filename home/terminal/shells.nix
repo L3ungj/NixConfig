@@ -5,6 +5,7 @@
     hyrl = "hyprctl reload";
     nfz = "nvim $(fzf)";
     ta = "tmux attach";
+    ods = "onedrive --sync";
   };
   init = ''
     export OLLAMA_API_KEY=$(cat ${config.sops.secrets.ollama_api_key.path})
