@@ -79,6 +79,12 @@
     usbutils # lsusb
     sbctl
 
+    # C/C++ tools
+    gcc
+    gnumake
+    cmake
+    libclang
+
     # webdev
     bun
 
