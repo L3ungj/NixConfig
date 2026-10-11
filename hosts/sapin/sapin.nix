@@ -37,6 +37,12 @@
 
   networking.hostName = "sapin";
 
+  # Enable Waydroid for running Android apps
+  virtualisation.waydroid = {
+    enable = true;
+    package = pkgs.waydroid-nftables;
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
