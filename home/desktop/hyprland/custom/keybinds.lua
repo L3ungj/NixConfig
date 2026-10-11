@@ -2,6 +2,7 @@
 
 hl.unbind("SUPER + SUPER_L")
 hl.unbind("SUPER + SUPER_R")
+hl.bind("SUPER + R", hl.dsp.global("quickshell:overviewWorkspacesToggle"), { description = "Shell: Run program" })
 
 -- Session
 hl.bind("CTRL + SHIFT + ALT + SUPER + Backspace", hl.dsp.exec_cmd("systemctl reboot"),
