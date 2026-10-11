@@ -86,7 +86,7 @@ in {
       enable = true;
       settings = {
         "clangd.arguments" = [
-          "--query-driver=/nix/store/*/bin/gcc,/nix/store/*/bin/g++"
+          "--query-driver=/home/kazu/.nix-profile/bin/c++"
         ];
       };
     };
