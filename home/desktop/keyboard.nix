@@ -9,6 +9,30 @@
         fcitx5-mozc
       ];
       waylandFrontend = true;
+      settings = {
+        inputMethod = {
+          "Groups/0" = {
+            Name = "main";
+            "Default Layout" = "us";
+            DefaultIM = "keyboard-us";
+          };
+          "Groups/0/Items/0" = {
+            Name = "keyboard-us";
+          };
+          "Groups/0/Items/1" = {
+            Name = "rime";
+          };
+          "Groups/0/Items/2" = {
+            Name = "mozc";
+          };
+          GroupOrder."0" = "main";
+        };
+        globalOptions = {
+          "Hotkey/TriggerKeys" = {
+            "0" = "Super+space";
+          };
+        };
+      };
     };
   };
 }
