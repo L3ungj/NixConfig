@@ -94,6 +94,7 @@ in {
       fzf-lua
       coc-clangd
       (nvim-treesitter.withPlugins (p: map (l: p.${l}) langs))
+      mini-nvim
     ];
   };
 }
