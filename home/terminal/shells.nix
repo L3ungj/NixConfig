@@ -7,9 +7,9 @@
     ta = "tmux attach";
     ods = "onedrive --sync";
   };
-  init = ''
-    export OLLAMA_API_KEY=$(cat ${config.sops.secrets.ollama_api_key.path})
-  '';
+  # init = ''
+  #   export OLLAMA_API_KEY=$(cat ${config.sops.secrets.ollama_api_key.path})
+  # '';
 in {
   programs.fish = {
     enable = true;
@@ -20,7 +20,7 @@ in {
     '';
 
     shellAliases = aliases;
-    shellInit = init;
+    # shellInit = init;
   };
 
   programs.bash = {
@@ -28,6 +28,6 @@ in {
     enableCompletion = true;
 
     shellAliases = aliases;
-    bashrcExtra = init;
+    # bashrcExtra = init;
   };
 }
