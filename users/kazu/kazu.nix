@@ -100,7 +100,6 @@
     # apps
     musescore
     firefox
-    obsidian
   ];
 
   programs.git = {

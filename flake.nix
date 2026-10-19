@@ -40,6 +40,10 @@
       # url = "path:/home/kazu/dev/mnemoflake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    obsidian-extensions = {
+      url = "github:karaolidis/nix-obsidian-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   nixConfig = {
@@ -107,6 +111,7 @@
           doCheck = false;
         });
       })
+      inputs.obsidian-extensions.overlays.default
     ];
   in {
     nixosConfigurations = builtins.listToAttrs (map (host: let
