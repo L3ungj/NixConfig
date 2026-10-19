@@ -643,11 +643,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789991025,
-        "narHash": "sha256-8lDX6epREfc609CRW5S21qtY3UvxTRIV874Z4tYz498=",
+        "lastModified": 1792184436,
+        "narHash": "sha256-eDe45Muel2/e+jLyoZFqz/Os8BG8j8cxcUVOKf64HHg=",
         "owner": "L3ungj",
         "repo": "sageask",
-        "rev": "b9fce48c2ef32b6402b32fff570ab7e51e0d4a78",
+        "rev": "50ae99a302dd52ab2b2e3544fd0d31bb24330914",
         "type": "github"
       },
       "original": {

@@ -13,6 +13,7 @@
     "${self}/sops/nixos.nix"
     "${self}/nixos/weylus.nix"
     "${self}/nixos/wifi.nix"
+    "${self}/nixos/bitwarden.nix"
   ];
 
   boot.loader = {
