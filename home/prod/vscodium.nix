@@ -77,5 +77,6 @@ in {
 
   home.packages = with pkgs; [
     miktex
+    latexminted
   ];
 }
