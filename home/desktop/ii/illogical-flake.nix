@@ -1,7 +1,4 @@
-{
-  inputs,
-  ...
-}: {
+{self, inputs, ...}: {
   imports = [
     inputs.illogical-flake.homeManagerModules.default
   ];
@@ -19,4 +16,6 @@
     # Files here are overlaid onto ~/.config/hypr/custom after every switch
     hyprland.customDir = ./custom;
   };
+
+  home.file."Pictures/Wallpapers".source = "${self}/assets/wallpapers";
 }

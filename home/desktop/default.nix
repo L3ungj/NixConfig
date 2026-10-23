@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./lan-mouse.nix
-    ./hyprland
+    ./ii
     ./nemo.nix
     ./keyboard.nix
   ];

@@ -2,10 +2,11 @@
   aliases = {
     nos = "sudo true && nh os switch .; hyrl";
     nrs = "sudo nixos-rebuild switch --flake .; hyrl";
+    nosh = "nh os switch . --target-host";
     hyrl = "hyprctl reload";
-    nfz = "nvim $(fzf)";
     ta = "tmux attach";
     ods = "onedrive --sync";
+    logout = "hyprctl dispatch 'hl.dsp.exit()'";
   };
   # init = ''
   #   export OLLAMA_API_KEY=$(cat ${config.sops.secrets.ollama_api_key.path})
