@@ -19,5 +19,6 @@
     "/cam/"
     "/career/"
     "/file_share/sec/"
+    "/dev/"
   ];
 }

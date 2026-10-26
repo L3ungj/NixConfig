@@ -2,11 +2,13 @@
   programs.obsidian = {
     enable = true;
 
-    vaults.mynotes.target = "onedrive/cam/cstii/mynotes";
-    vaults.mynotes.settings = {
-      app = {
+    vaults.mynotes = {
+      target = "onedrive/cam/cstii/mynotes";
+      settings.app = {
         newLinkFormat = "absolute";
         attachmentFolderPath = "images";
+        spellcheck = false;
+        vimMode = true;
       };
     };
 
