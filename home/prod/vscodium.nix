@@ -26,14 +26,6 @@
       hash = "sha256-xvFrIlq4aSXyvZ6Mxbox5hSXjM+hIPFQm99umeW+8T8=";
     };
   };
-  clangd = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
-    mktplcRef = {
-      name = "vscode-clangd";
-      publisher = "llvm-vs-code-extensions";
-      version = "0.6.0";
-      hash = "sha256-hmoAPCp0BKB3z6z2Ai0w45RDE9v3BYupmu2A5y5OM50=";
-    };
-  };
 in {
   programs.vscodium = {
     enable = true;
@@ -45,7 +37,7 @@ in {
         github.copilot-chat
         qt-qml
         open-remote-ssh
-        clangd
+        vscodevim.vim
       ];
       keybindings = [
         {
