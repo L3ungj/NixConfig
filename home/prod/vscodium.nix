@@ -1,12 +1,12 @@
 {pkgs, ...}: let
-  opencui = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
-    mktplcRef = {
-      name = "opencui";
-      publisher = "haoyangzeng";
-      version = "1.12.1";
-      hash = "sha256-2+S0D1bLJ7URIJYCNGG8sjJKoyWea1ZPkWxJ1WJuoq8=";
-    };
-  };
+  # opencui = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+  #   mktplcRef = {
+  #     name = "opencui";
+  #     publisher = "haoyangzeng";
+  #     version = "1.12.1";
+  #     hash = "sha256-2+S0D1bLJ7URIJYCNGG8sjJKoyWea1ZPkWxJ1WJuoq8=";
+  #   };
+  # };
   qt-qml = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
     mktplcRef = {
       name = "qt-qml";
@@ -68,7 +68,6 @@ in {
   };
 
   home.packages = with pkgs; [
-    miktex
-    latexminted
+    texliveFull
   ];
 }
