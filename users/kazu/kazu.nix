@@ -14,6 +14,7 @@
     "${self}/home/prod"
     inputs.sops-nix.homeManagerModules.sops
     "${self}/sops/home.nix"
+    inputs.nix-index-database.homeModules.default
   ];
 
   home.username = "kazu";
@@ -69,9 +70,6 @@
     usbutils # lsusb
     sbctl
 
-    # nix tools
-    comma
-
     # C/C++ tools
     gcc
     gnumake
@@ -94,6 +92,7 @@
     musescore
     firefox
     pinta
+    libreoffice
   ];
 
   programs.git = {
@@ -106,6 +105,8 @@
       init.defaultBranch = "main";
     };
   };
+
+  programs.nix-index-database.comma.enable = true; 
 
   home.activation.hypridle-suspend-disable = lib.mkIf (host.name == "aether" || host.name == "olympus") (
     config.lib.dag.entryAfter ["copyIllogicalImpulseConfigs"] ''
