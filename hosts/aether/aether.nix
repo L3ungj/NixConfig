@@ -14,6 +14,7 @@
     "${self}/nixos/weylus.nix"
     "${self}/nixos/wifi.nix"
     "${self}/nixos/bitwarden.nix"
+    "${self}/nixos/keyd.nix"
   ];
 
   boot.loader = {

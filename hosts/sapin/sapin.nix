@@ -19,6 +19,7 @@
     "${self}/nixos/wifi.nix"
     "${self}/nixos/bitwarden.nix"
     "${self}/nixos/fprint_eh57e.nix"
+    "${self}/nixos/keyd.nix"
   ];
 
   boot.loader = {
