@@ -4,6 +4,7 @@
     nrs = "sudo nixos-rebuild switch --flake .; hyrl";
     nosh = "nh os switch . --target-host";
     hyrl = "hyprctl reload";
+    nd = "nix develop";
     
     ta = "tmux attach";
     ods = "onedrive --sync";
